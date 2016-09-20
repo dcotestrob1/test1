@@ -5,7 +5,7 @@
   "instances": 1,
   "container": {
     "docker": {
-      "image": "dcorobtest2/test1:latest",
+      "image": "dcorobtest2/test2:latest",
       "portMappings": [
         {
           "containerPort": 80,
