@@ -37,7 +37,7 @@ node {
         credentialsId: 'dcos-token',
         filename: 'marathon.json',
         appId: 'nginx-robtest',
-        docker: "dcotestrob2/test1::${gitCommit()}".toString()
+        docker: "dcotestrob2/test1:${gitCommit()}".toString()
     )
 }
 
