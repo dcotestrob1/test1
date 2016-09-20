@@ -12,7 +12,7 @@ node {
 
     // Build Docker image
     stage 'Build'
-    sh "docker build -t dcotestrob1/test1:${gitCommit()} ."
+    sh "docker build -t dcotestrob2/test1:${gitCommit()} ."
 
     // Log in and push image to GitLab
     stage 'Publish'
@@ -25,7 +25,7 @@ node {
         ]]
     ) {
         sh "docker login -u ${env.DOCKERHUB_USERNAME} -p ${env.DOCKERHUB_PASSWORD} -e demo@mesosphere.com"
-        sh "docker push dcotestrob1/test1:${gitCommit()}"
+        sh "docker push dcotestrob2/test1:${gitCommit()}"
     }
 }
 
