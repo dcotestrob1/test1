@@ -12,7 +12,7 @@ node {
 
     // Build Docker image
     stage 'Build'
-    sh "docker build -t dcotestrob2/test1:${gitCommit()} ."
+    sh "docker build -t dcorobtest2/test1:${gitCommit()} ."
 
     // Log in and push image to GitLab
     stage 'Publish'
@@ -37,7 +37,7 @@ node {
         credentialsId: 'dcos-token',
         filename: 'marathon.json',
         appId: 'nginx-robtest',
-        docker: "dcotestrob2/test1:${gitCommit()}".toString()
+        docker: "dcorobtest2/test1:${gitCommit()}".toString()
     )
 }
 
